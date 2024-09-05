@@ -1,0 +1,28 @@
+public class CalcularFormaGeometrica {
+
+    public static void main(String[] args) {
+         Forma forma = new Forma();
+         
+    
+        System.out.println("Area do Quadrado: " + forma.calcularArea(2));
+        System.out.println("Area do Retangulo: " + forma.calcularArea(2,1));
+        System.out.println("Area do Circulo: " + forma.calcularArea(1, true));
+    }
+}
+
+
+public class Forma {
+    
+   public double calcularArea(double lado){
+       return lado * lado;
+   }
+
+   public double calcularArea(double base, double altura){
+       return base * altura;
+   }
+
+
+    public double calcularArea(double raio, boolean isCirculo){
+       return Math.PI * raio * raio;
+   }
+}
