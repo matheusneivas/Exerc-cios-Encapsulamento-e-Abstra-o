@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Soma {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o primeiro digito: ");
+        double num1 = scanner.nextDouble();
+        
+        System.out.println("Digite o segundo digito: ");
+        double num2 = scanner.nextDouble();
+        
+         double somar = num1 + num2;
+        
+        System.out.println("A soma dos dois digitos e: " + somar);
+    }
+}
