@@ -1,0 +1,46 @@
+public class Produto {
+
+    private String nome;
+    private int codigo;
+    private double preco;
+
+    public Produto(String nome, int codigo, double preco) {
+        this.nome = nome;
+        this.codigo = codigo;
+        this.preco = preco;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Nome do Produto: " + nome);
+    }
+
+    public void exibirInformacoes(boolean exibirCodigo) {
+        System.out.println("Nome do Produto: " + nome);
+        if (exibirCodigo) {
+            System.out.println("Código do Produto: " + codigo);
+        }
+    }
+
+    public void exibirInformacoes(boolean exibirCodigo, boolean exibirPreco) {
+        System.out.println("Nome do Produto: " + nome);
+        if (exibirCodigo) {
+            System.out.println("Código do Produto: " + codigo);
+        }
+        if (exibirPreco) {
+            System.out.println("Preço do Produto: R$ " + preco);
+        }
+    }
+
+    public static void main(String[] args) {
+        Produto produto = new Produto("Raquete de Tenis", 54321, 1500.00);
+
+        System.out.println("Exibindo apenas o nome:");
+        produto.exibirInformacoes();
+
+        System.out.println("\nExibindo o nome e o código:");
+        produto.exibirInformacoes(true);
+
+        System.out.println("\nExibindo o nome, código e preço:");
+        produto.exibirInformacoes(true, true);
+    }
+}
